@@ -27,6 +27,11 @@ $ npm i @henning410/character-error-rate
 
 ## Usage
 
+You can decide if punctuation and capitalization should be considered in the calculation.
+```ts
+ calcCER(reference: string, transcription: string, withPunctuation: boolean, withCapitalization: boolean));
+```
+
 ```js
 import calcCER from '@henning410/character-error-rate';
 
