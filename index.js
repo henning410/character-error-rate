@@ -30,13 +30,17 @@ function calcCER(reference, transcription, withPunctuation, withCapitalization) 
  * @param {boolean} withCapitalization - True when capitalization should be considered for calculation, otherwise false..
  */
 function levenshteinDistance(reference, transcription, withPunctuation, withCapitalization) {
-    reference = reference.replace(/[\/#$%\^&\*;:{}=\-_`~()"']/g, "");
-    if (!reference.length) return transcription.length;
-    if (!transcription.length) return reference.length;
+     if (!reference.length) return transcription.length;
+     if (!transcription.length) return reference.length;
+
+    // delete all probably not recognized special symbols, because no transcription service can transcribe such symbols
+    reference = reference.replace(/[\/#\^&\*{}=\-_`~()"']/g, "");
+    transcription = transcription.replace(/[\/#\^&\*{}=\-_`~()"']/g, "");
+
     if (!withPunctuation) {
-        // delete all punctuation symbols like ?,.-;!.
-        reference = reference.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
-        transcription = transcription.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+        // delete all punctuation symbols like ?,.-;!
+        reference = reference.replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g, "");
+        transcription = transcription.replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g, "");
     }
     if (!withCapitalization) {
         reference = reference.toLowerCase();

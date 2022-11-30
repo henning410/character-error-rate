@@ -1,6 +1,6 @@
 {
-  "name": "@henning410/character-error-rate",
-  "version": "1.1.2",
+  "name": "character-error-rate",
+  "version": "1.1.4",
   "description": "npm package for calculating the character-error-rate between two strings to evaluate speech recognition quality",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/henning410/character-error-rate.git"
   },
-  "keywords": ["ASR", "Character", "Error", "Rate"],
+  "keywords": ["ASR", "Character", "Error", "Rate", "STT", "CER", "character error rate", "Speech-to-text", "Speech recognition", "Evaluation"],
   "author": "henning410",
   "license": "MIT",
   "bugs": {

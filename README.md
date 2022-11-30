@@ -22,7 +22,7 @@ v8.16.0
 Install the npm-package
 
 ```sh
-$ npm i @henning410/character-error-rate
+$ npm i character-error-rate
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ You can decide if punctuation and capitalization should be considered in the cal
 ```
 
 ```js
-import calcCER from '@henning410/character-error-rate';
+import calcCER from 'character-error-rate';
 
 console.log('CER: ', calcCER('reference text', 'transcription text', true, true));
 ```
